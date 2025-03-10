@@ -16,10 +16,7 @@ const Instance = ({ Icon, href }: { Icon: IconType; href: string }) => (
 
 const SocialMedia = () => (
   <div className="absolute bottom-0 left-1 z-[2] flex flex-col items-center justify-end md:bottom-8 md:left-8">
-    <Instance
-      Icon={FaGithub}
-      href="https://github.com/github.com/lendai-token"
-    />
+    <Instance Icon={FaGithub} href="https://github.com/lendai-token" />
     <Instance Icon={BsTwitter} href="https://twitter.com/btak11" />
   </div>
 );
