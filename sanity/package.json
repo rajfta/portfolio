@@ -1,10 +1,10 @@
 {
-  "name": "reinportfolio",
+  "name": "rajftaportfolio",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Adam Reinmuller <adam.rajmuller@gmail.com>",
+  "author": "Rajfta <rajfta@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",

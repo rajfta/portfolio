@@ -17,12 +17,12 @@ const Wrapper = ({ children, idName, classNames, style }: WrapperProps) => {
       style={style}
     >
       <SocialMedia />
-      <div className="flex w-full flex-1 items-center justify-center">
+      <div className="flex items-center justify-center flex-1 w-full">
         {children}
 
-        <div className="pointer-events-none absolute bottom-0 right-1 md:bottom-8 md:right-8 ">
+        <div className="absolute bottom-0 pointer-events-none right-1 md:bottom-8 md:right-8 ">
           <p className="px-4 text-[8px] uppercase text-zinc-400 sm:px-8 md:text-sm">
-            @2022 Rein
+            @2022 Rajfta
           </p>
         </div>
       </div>

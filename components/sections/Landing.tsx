@@ -62,7 +62,7 @@ const FloatingTechsComponent = () => {
             className={`flex items-center justify-center rounded-full bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] ${classNames}`}
             key={`circle-${index}`}
           >
-            <div className="relative h-2/3 w-2/3">
+            <div className="relative w-2/3 h-2/3">
               <Image
                 layout="fill"
                 objectFit="contain"
@@ -106,13 +106,13 @@ const Landing = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="relative flex h-full w-full flex-1 select-none flex-col justify-center px-4 pb-8 pt-24 md:w-full md:flex-row md:items-center md:pt-24 md:pb-0 xl:px-32 xl:pt-32 2xl:px-48">
+        <div className="relative flex flex-col justify-center flex-1 w-full h-full px-4 pt-24 pb-8 select-none md:w-full md:flex-row md:items-center md:pt-24 md:pb-0 xl:px-32 xl:pt-32 2xl:px-48">
           <motion.div
             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
             className="mr-0 flex h-full w-full flex-[1] flex-col items-start justify-start md:mx-8 md:items-center md:justify-center"
           >
-            <div className="flex w-full flex-col items-start justify-start xl:items-end xl:justify-center">
+            <div className="flex flex-col items-start justify-start w-full xl:items-end xl:justify-center">
               <div className="flex w-auto flex-row items-center justify-center rounded-2xl px-8 py-4 shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
                 <AnimatePresence exitBeforeEnter>
                   {repeat ? (
@@ -143,7 +143,7 @@ const Landing = () => {
                         repeat: Infinity,
                         repeatType: 'loop',
                       }}
-                      className=" cursor-pointer text-4xl 2xl:text-7xl"
+                      className="text-4xl cursor-pointer  2xl:text-7xl"
                     >
                       👋
                     </motion.span>
@@ -151,28 +151,28 @@ const Landing = () => {
                     <motion.span
                       animate={{ scale: 1 }}
                       onClick={toggle}
-                      className=" relative cursor-pointer text-4xl 2xl:text-7xl"
+                      className="relative text-4xl cursor-pointer  2xl:text-7xl"
                     >
                       👋
                     </motion.span>
                   )}
                 </AnimatePresence>
                 <div style={{ marginLeft: 20 }}>
-                  <p className="p-text mb-4 text-right">Hello there, I am</p>
+                  <p className="mb-4 text-right p-text">Hello there, I am</p>
                   <h1
                     style={{ textAlign: 'right' }}
-                    className="head-text leading-none"
+                    className="leading-none head-text"
                   >
-                    Adam <span>Rein</span> Rajmuller
+                    <span>Rajfta</span>
                   </h1>
                 </div>
               </div>
 
               <div className="mt-4 flex w-auto flex-col items-center justify-center rounded-2xl px-8 py-4 shadow-[0px_0px_20px_rgba(0,0,0,0.1)] md:mt-12">
-                <p className="p-text w-full text-right uppercase">
+                <p className="w-full text-right uppercase p-text">
                   Software Engineer
                 </p>
-                <p className="p-text w-full text-right uppercase">
+                <p className="w-full text-right uppercase p-text">
                   Crypto Degen
                 </p>
               </div>
@@ -182,7 +182,7 @@ const Landing = () => {
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5, delayChildren: 0.5 }}
-            className="flex-2 relative my-8 flex h-full w-full items-end justify-end xl:my-0"
+            className="relative flex items-end justify-end w-full h-full my-8 flex-2 xl:my-0"
           >
             <Image
               layout="fill"

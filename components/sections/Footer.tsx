@@ -39,9 +39,9 @@ const Contact = ({
   if (!isFormSubmitted) {
     return (
       <div className="mx-8 flex min-w-[300px] flex-col items-center justify-center md:my-4 md:w-3/5">
-        <div className="my-3 flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary transition-all duration-300 ease-in-out hover:shadow-sm hover:shadow-slate-300">
+        <div className="flex items-center justify-center w-full my-3 transition-all duration-300 ease-in-out cursor-pointer rounded-xl bg-primary hover:shadow-sm hover:shadow-slate-300">
           <input
-            className="w-full rounded-lg bg-slate-200 p-4 text-gray outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full p-4 rounded-lg outline-none bg-slate-200 text-gray focus:ring-2 focus:ring-secondary"
             type="text"
             placeholder="Your Name"
             name="name"
@@ -49,9 +49,9 @@ const Contact = ({
             onChange={handleChangeInput}
           />
         </div>
-        <div className="my-3 flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary transition-all duration-300 ease-in-out hover:shadow-sm hover:shadow-slate-300">
+        <div className="flex items-center justify-center w-full my-3 transition-all duration-300 ease-in-out cursor-pointer rounded-xl bg-primary hover:shadow-sm hover:shadow-slate-300">
           <input
-            className="w-full rounded-lg bg-slate-200 p-4 text-gray outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full p-4 rounded-lg outline-none bg-slate-200 text-gray focus:ring-2 focus:ring-secondary"
             type="email"
             placeholder="Your Email"
             name="email"
@@ -59,9 +59,9 @@ const Contact = ({
             onChange={handleChangeInput}
           />
         </div>
-        <div className="my-3 flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary transition-all duration-300 ease-in-out hover:shadow-sm hover:shadow-slate-300">
+        <div className="flex items-center justify-center w-full my-3 transition-all duration-300 ease-in-out cursor-pointer rounded-xl bg-primary hover:shadow-sm hover:shadow-slate-300">
           <textarea
-            className="h-44 w-full rounded-lg bg-slate-200 p-4 text-gray outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full p-4 rounded-lg outline-none h-44 bg-slate-200 text-gray focus:ring-2 focus:ring-secondary"
             placeholder="Your Message"
             value={message}
             name="message"
@@ -144,20 +144,20 @@ const Footer = () => {
   return (
     <MotionWrapper>
       <Wrapper idName="contact">
-        <div className="md-mt-0 mt-16 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-16 md-mt-0">
           <div className="flex gap-4">
-            <h2 className="head-text translate-y-1 -rotate-45 select-none">
+            <h2 className="-rotate-45 translate-y-1 select-none head-text">
               🤙
             </h2>
             <h2 className="head-text">Contact me</h2>
-            <h2 className="head-text translate-y-1 -rotate-45 select-none">
+            <h2 className="-rotate-45 translate-y-1 select-none head-text">
               🤙
             </h2>
           </div>
 
-          <div className="mx-8 mt-6 mb-8 flex w-full flex-col items-center justify-center md:mt-16 md:w-3/5 md:flex-row md:gap-32">
+          <div className="flex flex-col items-center justify-center w-full mx-8 mt-6 mb-8 md:mt-16 md:w-3/5 md:flex-row md:gap-32">
             <div className="mt-4 mb-2 flex min-w-[300px] cursor-pointer items-center justify-start rounded-xl bg-[#faebed] p-4 pr-8 transition-all duration-300 ease-in-out hover:shadow-[0px_0px_2px_2px_#f5e3e5] sm:w-auto md:w-full">
-              <div className="relative mx-3 h-10 w-10">
+              <div className="relative w-10 h-10 mx-3">
                 <Image
                   src="/images/mail.png"
                   alt="email"
@@ -165,18 +165,15 @@ const Footer = () => {
                   objectFit="cover"
                 />
               </div>
-              <a
-                href="mailto:adam.rajmuller@gmail.com"
-                className="p-text font-medium"
-              >
-                adam.rajmuller@gmail.com
+              <a href="mailto:rajfta@gmail.com" className="font-medium p-text">
+                rajfta@gmail.com
               </a>
             </div>
             <a
               href="tel:+36 (20) 96-06333"
               className="my-4 flex min-w-[300px] cursor-pointer items-center justify-start rounded-xl bg-slate-200 p-4 transition-all duration-300 ease-in-out hover:shadow-[0px_0px_2px_2px_#d6cdce58] sm:w-auto md:w-full"
             >
-              <div className="relative mx-3 h-10 w-10">
+              <div className="relative w-10 h-10 mx-3">
                 <Image
                   src="/images/mobile.png"
                   alt="phone"

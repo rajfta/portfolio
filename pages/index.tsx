@@ -15,7 +15,7 @@ const Home = ({ abouts, works, skills }: HomeProps) => {
   return (
     <>
       <Head>
-        <title>Rein Portfolio Website</title>
+        <title>Rajfta Portfolio Website</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="relative bg-primary">
