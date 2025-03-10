@@ -17,23 +17,27 @@ const Skills = ({ skills: { experiences, skills } }: SkillsProps) => {
     {}
   );
 
+  const orderedExperiences = experiences.sort((a, b) => {
+    return new Date(b.year!).getTime() - new Date(a.year!).getTime();
+  });
+
   return (
     <MotionWrapper>
       <Wrapper idName="skills">
-        <div className="mt-16 flex flex-col items-center justify-center md:mt-0">
+        <div className="flex flex-col items-center justify-center mt-16 md:mt-0">
           <h2 className="head-text">Skills & Experiences</h2>
 
-          <div className="mt-12 flex w-4/5 flex-col lg:flex-row">
+          <div className="flex flex-col w-4/5 mt-12 lg:flex-row">
             <motion.div className="flex flex-[5] flex-wrap items-center justify-center lg:mr-20 lg:items-start lg:justify-start">
               {skills.map((skill) => (
                 <motion.div
                   whileInView={{ opacity: [0, 1] }}
                   transition={{ duration: 0.5 }}
-                  className=" m-4 flex flex-col items-center justify-center text-center transition-all duration-300 ease-in-out"
+                  className="flex flex-col items-center justify-center m-4 text-center transition-all duration-300 ease-in-out "
                   key={skill.name}
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fef4f5] transition-colors duration-300 ease-in-out hover:bg-[transparent] sm:h-24 sm:w-24">
-                    <div className="relative h-1/2 w-1/2">
+                    <div className="relative w-1/2 h-1/2">
                       <Image
                         src={skill.icon!.asset!.url!}
                         layout="fill"
@@ -42,7 +46,7 @@ const Skills = ({ skills: { experiences, skills } }: SkillsProps) => {
                       />
                     </div>
                   </div>
-                  <p className="p-text mt-2 font-medium 2xl:mt-4">
+                  <p className="mt-2 font-medium p-text 2xl:mt-4">
                     {skill.name}
                   </p>
                 </motion.div>
@@ -50,17 +54,17 @@ const Skills = ({ skills: { experiences, skills } }: SkillsProps) => {
             </motion.div>
 
             <div className="mt-8 flex flex-[2] flex-col items-start justify-start md:mt-0">
-              {experiences.map((experience) => (
+              {orderedExperiences.map((experience) => (
                 <motion.div
-                  className="my-4 flex w-full flex-row items-start justify-start"
+                  className="flex flex-row items-start justify-start w-full my-4"
                   key={experience.year}
                 >
                   <div className="mr-4 sm:mr-12">
-                    <p className="bold-text font-extrabold text-secondary">
+                    <p className="font-extrabold bold-text text-secondary">
                       {experience.year}
                     </p>
                   </div>
-                  <motion.div className="mb-4 flex w-full cursor-default flex-col items-start justify-start">
+                  <motion.div className="flex flex-col items-start justify-start w-full mb-4 cursor-default">
                     {experience.works!.map((work) => (
                       <div key={work!.name}>
                         <motion.div
@@ -72,11 +76,11 @@ const Skills = ({ skills: { experiences, skills } }: SkillsProps) => {
                           }
                           whileInView={{ opacity: [0, 1] }}
                           transition={{ duration: 0.5 }}
-                          className="relative mb-4 flex w-full cursor-pointer flex-col items-start justify-start"
+                          className="relative flex flex-col items-start justify-start w-full mb-4 cursor-pointer"
                           data-tip
                           data-for={work!.name}
                         >
-                          <h4 className="bold-text font-medium">
+                          <h4 className="font-medium bold-text">
                             {work!.name}
                           </h4>
                           <p className="p-text mt-1.5 font-normal text-gray">
