@@ -163,7 +163,7 @@ const Landing = () => {
                     style={{ textAlign: 'right' }}
                     className="leading-none head-text"
                   >
-                    <span>Rajfta</span>
+                    <span>rajfta</span>
                   </h1>
                 </div>
               </div>

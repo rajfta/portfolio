@@ -1,10 +1,10 @@
 {
-  "name": "rajftaportfolio",
+  "name": "rajfta-portfolio",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Rajfta <rajfta@gmail.com>",
+  "author": "rajfta <rajfta@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",

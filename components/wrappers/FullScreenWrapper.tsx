@@ -22,7 +22,7 @@ const Wrapper = ({ children, idName, classNames, style }: WrapperProps) => {
 
         <div className="absolute bottom-0 pointer-events-none right-1 md:bottom-8 md:right-8 ">
           <p className="px-4 text-[8px] uppercase text-zinc-400 sm:px-8 md:text-sm">
-            @2022 Rajfta
+            @2025 rajfta
           </p>
         </div>
       </div>

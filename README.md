@@ -1,4 +1,4 @@
-# Rajfta Portfolio Website
+# rajfta Portfolio Website
 
 ## Tech Stack
 
