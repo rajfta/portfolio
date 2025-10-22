@@ -1,5 +1,4 @@
 import { GraphQLClient } from 'graphql-request';
-import * as Dom from 'graphql-request/dist/types.dom';
 import gql from 'graphql-tag';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
@@ -1270,7 +1269,7 @@ export function getSdk(
   return {
     About(
       variables?: AboutQueryVariables,
-      requestHeaders?: Dom.RequestInit['headers']
+      requestHeaders?: HeadersInit
     ): Promise<AboutQuery> {
       return withWrapper(
         (wrappedRequestHeaders) =>
@@ -1283,7 +1282,7 @@ export function getSdk(
     },
     Skill(
       variables?: SkillQueryVariables,
-      requestHeaders?: Dom.RequestInit['headers']
+      requestHeaders?: HeadersInit
     ): Promise<SkillQuery> {
       return withWrapper(
         (wrappedRequestHeaders) =>
@@ -1296,7 +1295,7 @@ export function getSdk(
     },
     Work(
       variables?: WorkQueryVariables,
-      requestHeaders?: Dom.RequestInit['headers']
+      requestHeaders?: HeadersInit
     ): Promise<WorkQuery> {
       return withWrapper(
         (wrappedRequestHeaders) =>

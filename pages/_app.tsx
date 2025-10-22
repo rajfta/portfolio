@@ -7,7 +7,7 @@ import {
   useOverlayImplementation,
 } from '../components';
 
-import '../styles/globals.scss';
+import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const { dismiss, display, isOpen } = useOverlayImplementation();

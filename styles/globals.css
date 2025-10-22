@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import "tailwindcss";
 
 @theme {
   --color-primary: #edf2f8;
@@ -19,13 +18,14 @@ body {
   margin: 0;
   font-family: 'Dm Sans', sans-serif;
   scroll-behavior: smooth;
+}
 
-  :target:before {
-    content: '';
-    display: block;
-    height: 720px;
-    margin: -720px 0 0;
-  }
+html :target:before,
+body :target:before {
+  content: '';
+  display: block;
+  height: 720px;
+  margin: -720px 0 0;
 }
 
 @layer components {
@@ -33,24 +33,28 @@ body {
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    @apply text-black;
-    @apply capitalize;
+    color: var(--color-black);
+    text-transform: capitalize;
+  }
 
-    span {
-      @apply text-secondary;
-    }
+  .head-text span {
+    color: var(--color-secondary);
+  }
 
-    @media screen and (max-width: 450px) {
+  @media screen and (max-width: 450px) {
+    .head-text {
       font-size: 2rem;
     }
   }
 
   .p-text {
     font-size: 0.8rem;
-    @apply text-gray;
+    color: var(--color-gray);
     line-height: 1.5;
+  }
 
-    @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
+    .p-text {
       font-size: 1rem;
     }
   }
@@ -58,10 +62,12 @@ body {
   .bold-text {
     font-size: 1rem;
     font-weight: 800;
-    @apply text-black;
+    color: var(--color-black);
     text-align: left;
+  }
 
-    @media screen and (max-width: 450px) {
+  @media screen and (max-width: 450px) {
+    .bold-text {
       font-size: 0.9rem;
     }
   }

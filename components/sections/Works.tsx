@@ -101,7 +101,7 @@ const Works = ({ works }: WorksProps) => {
                         >
                           <motion.div
                             whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.25, easings: 'linear' }}
+                            transition={{ duration: 0.25, ease: 'linear' }}
                             className="m-4 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[rgba(0,0,0,0.5)] font-extrabold text-[#fff]"
                           >
                             <AiFillEye className="h-1/2 w-1/2 text-white" />
@@ -116,7 +116,7 @@ const Works = ({ works }: WorksProps) => {
                         >
                           <motion.div
                             whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.25, easings: 'linear' }}
+                            transition={{ duration: 0.25, ease: 'linear' }}
                             className="m-4 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[rgba(0,0,0,0.5)] font-extrabold text-[#fff]"
                           >
                             <AiFillGithub className="h-1/2 w-1/2 text-white" />

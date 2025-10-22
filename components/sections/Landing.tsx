@@ -12,7 +12,6 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOut',
     },
   },
 };
@@ -29,7 +28,6 @@ const techs = [
 const FloatingTechsComponent = () => {
   return (
     <motion.div
-      variants={scaleVariants}
       whileInView={scaleVariants.whileInView}
       className="ml-0 flex h-full flex-[1] flex-row flex-wrap items-start justify-center gap-8 md:ml-4 md:flex-col md:gap-4"
     >
@@ -114,7 +112,7 @@ const Landing = () => {
           >
             <div className="flex flex-col items-start justify-start w-full xl:items-end xl:justify-center">
               <div className="flex w-auto flex-row items-center justify-center rounded-2xl px-8 py-4 shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
-                <AnimatePresence exitBeforeEnter>
+                <AnimatePresence mode="wait">
                   {repeat ? (
                     <motion.span
                       exit={{ scale: 0 }}
