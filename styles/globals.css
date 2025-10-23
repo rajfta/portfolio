@@ -1,74 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #edf2f8;
-  --color-secondary: #E452A0;
-  --color-tertiary: #c4528f;
-  --color-black: #030303;
-  --color-light-gray: #e4e4e4;
-  --color-gray: #6b7688;
-  --color-brown: #46364a;
-  --color-white: #ffffff;
+	--color-primary: #edf2f8;
+	--color-secondary: #e452a0;
+	--color-tertiary: #c4528f;
+	--color-black: #030303;
+	--color-light-gray: #e4e4e4;
+	--color-gray: #6b7688;
+	--color-brown: #46364a;
+	--color-white: #ffffff;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Dm Sans', sans-serif;
-  scroll-behavior: smooth;
+	padding: 0;
+	margin: 0;
+	font-family: "Dm Sans", sans-serif;
+	scroll-behavior: smooth;
 }
 
 html :target:before,
 body :target:before {
-  content: '';
-  display: block;
-  height: 720px;
-  margin: -720px 0 0;
+	content: "";
+	display: block;
+	height: 720px;
+	margin: -720px 0 0;
 }
 
 @layer components {
-  .head-text {
-    font-size: 2.75rem;
-    font-weight: 800;
-    text-align: center;
-    color: var(--color-black);
-    text-transform: capitalize;
-  }
+	.head-text {
+		font-size: 2.75rem;
+		font-weight: 800;
+		text-align: center;
+		color: var(--color-black);
+		text-transform: capitalize;
+	}
 
-  .head-text span {
-    color: var(--color-secondary);
-  }
+	.head-text span {
+		color: var(--color-secondary);
+	}
 
-  @media screen and (max-width: 450px) {
-    .head-text {
-      font-size: 2rem;
-    }
-  }
+	@media screen and (max-width: 450px) {
+		.head-text {
+			font-size: 2rem;
+		}
+	}
 
-  .p-text {
-    font-size: 0.8rem;
-    color: var(--color-gray);
-    line-height: 1.5;
-  }
+	.p-text {
+		font-size: 0.8rem;
+		color: var(--color-gray);
+		line-height: 1.5;
+	}
 
-  @media screen and (min-width: 1024px) {
-    .p-text {
-      font-size: 1rem;
-    }
-  }
+	@media screen and (min-width: 1024px) {
+		.p-text {
+			font-size: 1rem;
+		}
+	}
 
-  .bold-text {
-    font-size: 1rem;
-    font-weight: 800;
-    color: var(--color-black);
-    text-align: left;
-  }
+	.bold-text {
+		font-size: 1rem;
+		font-weight: 800;
+		color: var(--color-black);
+		text-align: left;
+	}
 
-  @media screen and (max-width: 450px) {
-    .bold-text {
-      font-size: 0.9rem;
-    }
-  }
+	@media screen and (max-width: 450px) {
+		.bold-text {
+			font-size: 0.9rem;
+		}
+	}
 }

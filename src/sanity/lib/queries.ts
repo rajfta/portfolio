@@ -1,4 +1,4 @@
-import { defineQuery } from 'next-sanity'
+import { defineQuery } from "next-sanity";
 
 // Query for all abouts
 export const ABOUTS_QUERY = defineQuery(`*[_type == "abouts"] {
@@ -7,7 +7,7 @@ export const ABOUTS_QUERY = defineQuery(`*[_type == "abouts"] {
   title,
   description,
   "imgUrl": imgUrl.asset->url
-}`)
+}`);
 
 // Query for all works
 export const WORKS_QUERY = defineQuery(`*[_type == "works"] {
@@ -18,7 +18,7 @@ export const WORKS_QUERY = defineQuery(`*[_type == "works"] {
   codeLink,
   "imgUrl": imgUrl.asset->url,
   tags
-}`)
+}`);
 
 // Query for all skills
 export const SKILLS_QUERY = defineQuery(`*[_type == "skills"] {
@@ -26,7 +26,7 @@ export const SKILLS_QUERY = defineQuery(`*[_type == "skills"] {
   name,
   bgColor,
   "icon": icon.asset->url
-}`)
+}`);
 
 // Query for all experiences
 export const EXPERIENCES_QUERY = defineQuery(`*[_type == "experiences"] {
@@ -37,4 +37,4 @@ export const EXPERIENCES_QUERY = defineQuery(`*[_type == "experiences"] {
     company,
     desc
   }
-}`)
+}`);

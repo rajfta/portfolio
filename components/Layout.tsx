@@ -2,16 +2,16 @@ import { ReactNode } from "react";
 import { Header } from ".";
 
 type LayoutProps = {
-  children?: ReactNode;
+	children?: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  );
+	return (
+		<>
+			<Header />
+			{children}
+		</>
+	);
 };
 
 export default Layout;
