@@ -64,8 +64,8 @@ const FloatingTechsComponent = () => {
           >
             <div className="relative w-2/3 h-2/3">
               <Image
-                layout="fill"
-                objectFit="contain"
+                fill
+                className="object-contain"
                 src={url}
                 alt="profile_bg"
               />
@@ -185,12 +185,11 @@ const Landing = () => {
             className="relative flex items-end justify-end w-full h-full my-8 flex-2 xl:my-0"
           >
             <Image
-              layout="fill"
-              objectFit="contain"
+              fill
               src={
                 counter.current > 4 ? '/images/shrek.png' : '/images/sub2.png'
               }
-              className={`z-[1] transition-all duration-700 ease-linear ${
+              className={`z-[1] object-contain transition-all duration-700 ease-linear ${
                 !revealed ? 'brightness-[0.2]' : 'brightness-[1]'
               }`}
               alt="profile_picture"

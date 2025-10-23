@@ -31,10 +31,10 @@ const About = ({ abouts }: AboutProps) => {
               >
                 <div className="relative h-[170px] w-full overflow-hidden rounded-2xl 2xl:h-64">
                   <Image
-                    layout="fill"
-                    objectFit="cover"
-                    src={about.imgUrl!.asset!.url!}
-                    alt={about.title!}
+                    fill
+                    className="object-cover"
+                    src={about.imgUrl}
+                    alt={about.title}
                   />
                 </div>
                 <h2 className="bold-text mt-5" style={{ marginTop: 20 }}>

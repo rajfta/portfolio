@@ -163,8 +163,8 @@ const Footer = () => {
                 <Image
                   src="/images/mail.png"
                   alt="email"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <a href="mailto:rajfta@gmail.com" className="font-medium p-text">
@@ -179,8 +179,8 @@ const Footer = () => {
                 <Image
                   src="/images/mobile.png"
                   alt="phone"
-                  objectFit="cover"
-                  layout="fill"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <p className="p-text">+36 (20) 96-06333</p>

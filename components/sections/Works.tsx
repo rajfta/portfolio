@@ -81,10 +81,10 @@ const Works = ({ works }: WorksProps) => {
                 >
                   <div className="relative flex h-48 w-full items-center justify-center overflow-hidden rounded-lg">
                     <Image
-                      src={work.imgUrl!.asset!.url!}
-                      layout="fill"
-                      objectFit="cover"
-                      alt={work.title!}
+                      src={work.imgUrl}
+                      fill
+                      className="object-cover"
+                      alt={work.title}
                     />
 
                     <motion.div

@@ -46,8 +46,8 @@ const Header = () => {
 						unoptimized
 						src="/svgs/RD.svg"
 						alt="logo"
-						layout="fill"
-						objectFit="contain"
+						fill
+						className="object-contain"
 					/>
 				</a>
 				<ul className="hidden flex-1 items-center justify-center lg:flex">
