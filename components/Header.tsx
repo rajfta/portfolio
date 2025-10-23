@@ -103,13 +103,14 @@ const Header = () => {
 									className="m-4"
 									key={name}
 								>
-									<div
+									<button
+										type="button"
 										className="cursor-pointer text-sm font-medium uppercase text-gray transition-colors duration-300 ease-in-out hover:text-secondary"
 										draggable="false"
 										onClick={() => handleNavigate(name)}
 									>
 										{text}
-									</div>
+									</button>
 								</motion.li>
 							))}
 						</ul>

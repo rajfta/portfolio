@@ -20,7 +20,7 @@ const Skills = ({ skills: { experiences, skills } }: SkillsProps) => {
 	);
 
 	const orderedExperiences = experiences.sort((a, b) => {
-		return new Date(b.year!).getTime() - new Date(a.year!).getTime();
+		return new Date(b.year).getTime() - new Date(a.year).getTime();
 	});
 
 	return (
@@ -67,29 +67,27 @@ const Skills = ({ skills: { experiences, skills } }: SkillsProps) => {
 										</p>
 									</div>
 									<motion.div className="flex flex-col items-start justify-start w-full mb-4 cursor-default">
-										{experience.works!.map((work) => (
-											<div key={work!.name}>
+										{experience.works?.map((work) => (
+											<div key={work.name}>
 												<motion.div
 													onMouseEnter={() =>
-														setShowTooltip({ [work!.name!]: true })
+														setShowTooltip({ [work.name]: true })
 													}
 													onMouseLeave={() =>
-														setShowTooltip({ [work!.name!]: false })
+														setShowTooltip({ [work.name]: false })
 													}
 													whileInView={{ opacity: [0, 1] }}
 													transition={{ duration: 0.5 }}
 													className="relative flex flex-col items-start justify-start w-full mb-4 cursor-pointer"
 													data-tip
-													data-for={work!.name}
+													data-for={work.name}
 												>
-													<h4 className="font-medium bold-text">
-														{work!.name}
-													</h4>
+													<h4 className="font-medium bold-text">{work.name}</h4>
 													<p className="p-text mt-1.5 font-normal text-gray">
-														{work!.company}
+														{work.company}
 													</p>
-													<Tooltip show={showTooltip[work!.name!]}>
-														{work!.desc}
+													<Tooltip show={showTooltip[work.name]}>
+														{work.desc}
 													</Tooltip>
 												</motion.div>
 											</div>

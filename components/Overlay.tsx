@@ -3,10 +3,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { createContext, useContext, useEffect, useState } from "react";
 
-export const OverlayContext = createContext({
-	dismiss: null as any,
-	display: null as any,
-	isOpen: null as any,
+type OverlayContextType = {
+	dismiss: () => void;
+	display: () => void;
+	isOpen: boolean;
+};
+
+export const OverlayContext = createContext<OverlayContextType>({
+	dismiss: () => {},
+	display: () => {},
+	isOpen: false,
 });
 
 export const useOverlay = () => {
@@ -15,15 +21,19 @@ export const useOverlay = () => {
 };
 
 const disableScroll = () => {
-	const bodyStyle = document.querySelector("body")!.style;
-	bodyStyle.height = "100%";
-	bodyStyle.overflow = "hidden";
+	const bodyStyle = document.querySelector("body")?.style;
+	if (bodyStyle) {
+		bodyStyle.height = "100%";
+		bodyStyle.overflow = "hidden";
+	}
 };
 
 const enableScroll = () => {
-	const bodyStyle = document.querySelector("body")!.style;
-	bodyStyle.height = "auto";
-	bodyStyle.overflow = "visible";
+	const bodyStyle = document.querySelector("body")?.style;
+	if (bodyStyle) {
+		bodyStyle.height = "auto";
+		bodyStyle.overflow = "visible";
+	}
 };
 
 export const useOverlayImplementation = () => {

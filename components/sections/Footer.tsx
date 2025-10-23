@@ -13,8 +13,9 @@ type ContactProps = {
 	name: string;
 	email: string;
 	message: string;
-	// eslint-disable-next-line no-unused-vars
-	handleChangeInput: (e: any) => void;
+	handleChangeInput: (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+	) => void;
 	handleSubmit: () => void;
 };
 
@@ -100,7 +101,7 @@ const Footer = () => {
 	const { name, email, message } = formData;
 
 	const handleChangeInput = useCallback(
-		(e: any) => {
+		(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 			const { name, value } = e.target;
 			setFormData({ ...formData, [name]: value });
 		},
@@ -128,7 +129,7 @@ const Footer = () => {
 
 		try {
 			const response = await axios(config);
-			if (response.status == 200) {
+			if (response.status === 200) {
 				setLoading(false);
 				setIsFormSubmitted(true);
 			}

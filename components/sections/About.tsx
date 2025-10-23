@@ -21,13 +21,13 @@ const About = ({ abouts }: AboutProps) => {
 					</h2>
 
 					<div className="mt-8 flex flex-wrap items-start justify-center">
-						{abouts.map((about, index) => (
+						{abouts.map((about) => (
 							<motion.div
 								whileInView={{ opacity: 1 }}
 								whileHover={{ scale: 1.1 }}
 								transition={{ duration: 0.5, type: "tween" }}
 								className="m-8 flex w-48 flex-col items-start justify-start 2xl:my-8 2xl:mx-8 2xl:w-64 "
-								key={about.title! + index}
+								key={about._id}
 							>
 								<div className="relative h-[170px] w-full overflow-hidden rounded-2xl 2xl:h-64">
 									<Image

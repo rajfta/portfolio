@@ -1,12 +1,12 @@
-import React, { type ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import { NavigationDots, SocialMedia } from "..";
 
 type WrapperProps = {
 	children?: ReactNode;
 	idName: string;
-	classNames?: any;
-	style?: any;
+	classNames?: string;
+	style?: CSSProperties;
 };
 
 const Wrapper = ({ children, idName, classNames, style }: WrapperProps) => {

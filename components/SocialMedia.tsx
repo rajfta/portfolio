@@ -1,4 +1,3 @@
-import React from "react";
 import type { IconType } from "react-icons";
 import { BsTwitter } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";

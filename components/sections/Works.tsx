@@ -95,9 +95,9 @@ const Works = ({ works }: WorksProps) => {
 											}}
 											className="opacity-1 absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.5)] md:opacity-0"
 										>
-											{work?.projectLink && (
+											{work.projectLink && (
 												<a
-													href={work.projectLink!}
+													href={work.projectLink}
 													target="_blank"
 													rel="noreferrer"
 												>
@@ -137,7 +137,7 @@ const Works = ({ works }: WorksProps) => {
 										</p>
 
 										<div className="absolute -top-6 flex items-center justify-center rounded-lg bg-[#fff] px-4 py-2">
-											<p className="p-text">{work.tags![0]}</p>
+											<p className="p-text">{work.tags?.[0]}</p>
 										</div>
 									</div>
 								</div>

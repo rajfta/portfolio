@@ -60,7 +60,7 @@ const FloatingTechsComponent = () => {
 							repeatType: "mirror",
 						}}
 						className={`flex items-center justify-center rounded-full bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] ${classNames}`}
-						key={`circle-${index}`}
+						key={url}
 					>
 						<div className="relative w-2/3 h-2/3">
 							<Image

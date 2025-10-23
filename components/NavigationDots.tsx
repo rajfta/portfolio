@@ -12,9 +12,11 @@ const NavigationDots = ({ active }: NavigationDotsProps) => {
 	return (
 		<div className="hidden select-none flex-col items-center justify-center p-4 sm:flex">
 			{sections.map((item) => (
-				<div
+				<button
+					type="button"
 					onClick={() => onNavigate(item)}
 					key={item}
+					aria-label={`Navigate to ${item} section`}
 					className={`m-2 h-2.5 w-2.5 cursor-pointer rounded-full transition-colors duration-200 ease-in-out hover:bg-secondary ${
 						active === item ? "bg-secondary" : "bg-slate-400"
 					}`}
