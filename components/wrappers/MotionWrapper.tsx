@@ -1,7 +1,7 @@
 "use client";
 
-import { HTMLAttributes, ReactNode } from "react";
 import { motion } from "framer-motion";
+import type { HTMLAttributes, ReactNode } from "react";
 
 type MotionWrapperProps = {
 	children: ReactNode;

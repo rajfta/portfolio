@@ -1,10 +1,3 @@
-import { client } from "../sanity/lib/client";
-import {
-	ABOUTS_QUERY,
-	WORKS_QUERY,
-	SKILLS_QUERY,
-	EXPERIENCES_QUERY,
-} from "../sanity/lib/queries";
 import {
 	About,
 	Footer,
@@ -12,6 +5,13 @@ import {
 	Skills,
 	Works,
 } from "../../components/sections";
+import { client } from "../sanity/lib/client";
+import {
+	ABOUTS_QUERY,
+	EXPERIENCES_QUERY,
+	SKILLS_QUERY,
+	WORKS_QUERY,
+} from "../sanity/lib/queries";
 
 export default async function HomePage() {
 	const abouts = await client.fetch(ABOUTS_QUERY);

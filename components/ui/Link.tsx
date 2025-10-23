@@ -1,12 +1,12 @@
 "use client";
 
+import { default as NextLink } from "next/link";
 import {
-	AnchorHTMLAttributes,
-	DetailedHTMLProps,
-	ReactNode,
+	type AnchorHTMLAttributes,
+	type DetailedHTMLProps,
+	type ReactNode,
 	useState,
 } from "react";
-import { default as NextLink } from "next/link";
 
 type LinkProps = DetailedHTMLProps<
 	AnchorHTMLAttributes<HTMLAnchorElement>,

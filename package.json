@@ -7,8 +7,8 @@
 		"lint": "next lint",
 		"typecheck": "tsc --noEmit",
 		"check": "biome check .",
-		"fix": "biome format --write .",
-		"fix:unsafe": "biome format --write --unsafe ."
+		"fix": "biome check --write .",
+		"fix:unsafe": "biome check --unsafe ."
 	},
 	"dependencies": {
 		"@sanity/client": "^7.12.0",

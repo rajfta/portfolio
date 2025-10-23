@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-import { SkillsType } from "../../types/sanity";
+import type { SkillsType } from "../../types/sanity";
 
 import Tooltip from "../Tooltip";
 

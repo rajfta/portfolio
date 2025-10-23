@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { motion, AnimatePresence } from "framer-motion";
-import { useOverlay } from ".";
 import { onNavigate } from "../util";
+import { useOverlay } from ".";
 
 const sections = [
 	{ name: "landing", text: "home" },

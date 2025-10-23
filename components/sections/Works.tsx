@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
-import { WorksType } from "../../types/sanity";
+import type { WorksType } from "../../types/sanity";
 import { MotionWrapper, Wrapper } from "../wrappers";
 
 type WorksProps = {

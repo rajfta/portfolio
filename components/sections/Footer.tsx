@@ -1,8 +1,8 @@
 "use client";
 
+import axios from "axios";
 import Image from "next/image";
 import { useCallback, useState } from "react";
-import axios from "axios";
 
 import { MotionWrapper, Wrapper } from "../wrappers";
 
@@ -127,7 +127,6 @@ const Footer = () => {
 		};
 
 		try {
-			// @ts-ignore
 			const response = await axios(config);
 			if (response.status == 200) {
 				setLoading(false);
