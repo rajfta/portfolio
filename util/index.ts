@@ -18,8 +18,10 @@ export const memoize = <T, R>(fn: (...args: T[]) => R) => {
 
 export const onNavigate = (id: string) => {
 	const element = document.getElementById(id);
+	if (!element) return;
+
 	const headerOffset = id !== "skills" ? 72 : 130;
-	const elementPosition = element?.getBoundingClientRect().top;
+	const elementPosition = element.getBoundingClientRect().top;
 	const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
 	window.scrollTo({

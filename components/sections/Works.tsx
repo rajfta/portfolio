@@ -56,16 +56,17 @@ const Works = ({ works }: WorksProps) => {
 					</h2>
 
 					<div className="mt-16 mb-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-						{tags.map((item, index) => (
-							<div
-								key={index}
+						{tags.map((item) => (
+							<button
+								key={item}
+								type="button"
 								onClick={() => handleWorkFilter(item)}
 								className={`flex cursor-pointer items-center justify-center rounded-lg bg-white py-2 px-4 font-extrabold text-black shadow-sm transition-all duration-300 ease-linear hover:bg-secondary hover:text-[#fff] ${
 									activeFilter === item && "bg-secondary text-[#fff]"
 								}`}
 							>
 								{item}
-							</div>
+							</button>
 						))}
 					</div>
 
@@ -74,10 +75,10 @@ const Works = ({ works }: WorksProps) => {
 							animate={controls}
 							className="flex flex-wrap items-center justify-center"
 						>
-							{filteredWorks.map((work, index) => (
+							{filteredWorks.map((work) => (
 								<div
 									className="m-8 flex w-72 cursor-pointer flex-col items-center justify-center rounded-lg bg-[#fff] p-4 text-black transition-all duration-300 ease-linear hover:shadow-[0px_0px_25px_rgba(0,0,0,0.2)]"
-									key={index}
+									key={work._id}
 								>
 									<div className="relative flex h-48 w-full items-center justify-center overflow-hidden rounded-lg">
 										<Image
