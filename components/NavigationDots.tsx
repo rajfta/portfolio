@@ -1,3 +1,5 @@
+'use client'
+
 import { onNavigate } from '../util';
 
 type NavigationDotsProps = {

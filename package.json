@@ -5,7 +5,10 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "gen": "graphql-codegen --config codegen.yml --require dotenv/config"
+    "gen": "graphql-codegen --config codegen.yml --require dotenv/config",
+    "check": "biome check .",
+    "fix": "biome format --write .",
+    "fix:unsafe": "biome format --write --unsafe ."
   },
   "dependencies": {
     "@graphcms/rich-text-react-renderer": "^0.6.2",
@@ -31,6 +34,7 @@
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.2.7",
     "@graphcms/rich-text-types": "^0.5.1",
     "@graphql-codegen/cli": "6.0.1",
     "@graphql-codegen/typescript": "^5.0.2",

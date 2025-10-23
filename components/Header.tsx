@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import Image from 'next/image';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
@@ -41,6 +43,7 @@ const Header = () => {
           className="relative flex h-[26px] w-[52px] cursor-pointer items-center justify-start md:h-10 md:w-20"
         >
           <Image
+          unoptimized
             src="/svgs/RD.svg"
             alt="logo"
             layout="fill"
