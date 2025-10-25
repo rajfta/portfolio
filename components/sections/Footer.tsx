@@ -146,13 +146,7 @@ const Footer = () => {
 			<Wrapper idName="contact">
 				<div className="flex flex-col items-center justify-center mt-16 md-mt-0">
 					<div className="flex gap-4">
-						<h2 className="-rotate-45 translate-y-1 select-none head-text">
-							🤙
-						</h2>
 						<h2 className="head-text">Contact me</h2>
-						<h2 className="-rotate-45 translate-y-1 select-none head-text">
-							🤙
-						</h2>
 					</div>
 
 					<div className="flex flex-col items-center justify-center w-full mx-8 mt-6 mb-8 md:mt-16 md:w-3/5 md:flex-row md:gap-32">
