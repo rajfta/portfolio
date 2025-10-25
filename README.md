@@ -1,7 +1,1 @@
-# rajfta Portfolio Website
-
-## Tech Stack
-
-- NextJS
-- Sanity
-- Framer Motion
+# rajfta portfolio

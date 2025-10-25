@@ -3,7 +3,7 @@ import { Providers } from "./providers";
 import "../../styles/globals.css";
 
 export const metadata: Metadata = {
-	title: "Rajfta Portfolio Website",
+	title: "rajfta portfolio website",
 	description: "Portfolio website showcasing projects and skills",
 	icons: {
 		icon: "/favicon.ico",

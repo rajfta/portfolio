@@ -141,8 +141,6 @@ const Footer = () => {
 		}
 	};
 
-	// TODO: more work
-
 	return (
 		<MotionWrapper>
 			<Wrapper idName="contact">
