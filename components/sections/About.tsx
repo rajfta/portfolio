@@ -16,8 +16,8 @@ const About = ({ abouts }: AboutProps) => {
 			<Wrapper idName="about">
 				<div className="mt-16 flex flex-col md:mt-0">
 					<h2 className="head-text normal-case">
-						<span>Frontend</span> is my Swamp <br />
-						<span>Decentralization</span> is my Fiona <br />
+						Web is <span>love</span> <br />
+						Web is <span>life</span>
 					</h2>
 
 					<div className="mt-8 flex flex-wrap items-start justify-center">
@@ -29,7 +29,7 @@ const About = ({ abouts }: AboutProps) => {
 								className="m-8 flex w-48 flex-col items-start justify-start 2xl:my-8 2xl:mx-8 2xl:w-64 "
 								key={about._id}
 							>
-								<div className="relative h-[170px] w-full overflow-hidden rounded-2xl 2xl:h-64">
+								<div className="relative w-full aspect-square rounded-2xl overflow-hidden">
 									<Image
 										fill
 										className="object-cover"
