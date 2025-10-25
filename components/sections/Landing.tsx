@@ -21,10 +21,10 @@ const scaleVariants = {
 const memoizedGetRndNumber = memoize(getRndInteger);
 
 const techs = [
-	"/images/graphql.png",
+	"/images/ethereum.png",
 	"/images/react.png",
 	"/images/nextjs.png",
-	"/images/redux.png",
+	"/images/openai.png",
 ];
 
 const FloatingTechsComponent = () => {
@@ -110,7 +110,7 @@ const Landing = () => {
 					<motion.div
 						whileInView={{ x: [-100, 0], opacity: [0, 1] }}
 						transition={{ duration: 0.5 }}
-						className="mr-0 flex h-full w-full flex-[1] flex-col items-start justify-start md:mx-8 md:items-center md:justify-center"
+						className="mr-0 flex h-full w-full flex-1 flex-col items-start justify-start md:mx-8 md:items-center md:justify-center"
 					>
 						<div className="flex flex-col items-start justify-start w-full xl:items-end xl:justify-center">
 							<div className="flex w-auto flex-row items-center justify-center rounded-2xl px-8 py-4 shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
@@ -173,7 +173,7 @@ const Landing = () => {
 									Software Engineer
 								</p>
 								<p className="w-full text-right uppercase p-text">
-									Crypto Degen
+									Tech enthusiast
 								</p>
 							</div>
 						</div>
