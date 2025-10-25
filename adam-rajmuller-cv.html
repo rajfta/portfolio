@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Rajmuller - Senior Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.95;
+        }
+        
+        .contact-info a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .job-date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .company {
+            color: #764ba2;
+            font-size: 1em;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .job-description {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .job-description li {
+            padding-left: 20px;
+            margin-bottom: 6px;
+            position: relative;
+            color: #555;
+        }
+        
+        .job-description li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .project-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .project-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        
+        .project-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .languages {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .language-item {
+            font-size: 1em;
+            color: #555;
+        }
+        
+        .language-item strong {
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .header {
+                padding: 30px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .skill-tag {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .content {
+                padding: 30px;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ADAM RAJMULLER</h1>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:adam.rajmuller@gmail.com">adam.rajmuller@gmail.com</a></span>
+                <span>📱 +36 20 960 6333</span>
+                <span>📍 Budapest, Hungary</span>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Senior Software Engineer with a passion for cutting-edge technologies at the intersection of AI, blockchain, and modern web development. Specialized in architecting scalable web applications, with proven expertise in leading AI adoption initiatives and building sophisticated web3 solutions. Combining strong full-stack capabilities with a keen eye for design, I excel at transforming complex technical challenges into elegant, user-friendly interfaces. Experienced in remote collaboration across international teams and committed to staying at the forefront of emerging technologies in crypto, AI, and modern web ecosystems.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Senior Software Engineer</div>
+                        <div class="job-date">11/2023 - Present</div>
+                    </div>
+                    <div class="company">Request.Finance • Paris, France (Remote)</div>
+                    <ul class="job-description">
+                        <li>Architected and deployed web applications to Amazon Web Services</li>
+                        <li>Developed smart contracts with Solidity for blockchain integration</li>
+                        <li>Overseen the frontend architecture and technical direction</li>
+                        <li>Responsible for team-wide AI adoption and implementation strategies</li>
+                        <li>Integrated third-party APIs such as June, Sentry, Vezgo, merge.dev and Stripe into existing applications</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Full Stack Engineer</div>
+                        <div class="job-date">08/2022 - 11/2023</div>
+                    </div>
+                    <div class="company">Consola.Finance • Vienna, Austria (Remote)</div>
+                    <ul class="job-description">
+                        <li>Built applications using T3 stack, AWS lambdas, and Ethereum blockchain</li>
+                        <li>Researched strategies to provide a reliable accounting solution for web3 finances</li>
+                        <li>Integrated various blockchain API providers into AWS lambda functions</li>
+                        <li>Researched, documented and selected alternatives for web architecture and technologies</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Frontend Software Engineer</div>
+                        <div class="job-date">04/2021 - 08/2022</div>
+                    </div>
+                    <div class="company">Docler Holding • Budapest, Hungary</div>
+                    <ul class="job-description">
+                        <li>Designed testable code and applications using NextJS, GraphQL and TypeScript</li>
+                        <li>Fixed blocker issues on production on call</li>
+                        <li>Structured complicated data structures into easy to use user interfaces</li>
+                        <li>Worked with cross-functional teams to communicate project requirements and proposals</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Junior Software Engineer</div>
+                        <div class="job-date">08/2019 - 04/2021</div>
+                    </div>
+                    <div class="company">Docler Holding</div>
+                    <ul class="job-description">
+                        <li>Collaborated with team members on project tasks and assignments using React, Redux, Node and Express</li>
+                        <li>Assisted manufacturing engineering with development of work orders</li>
+                        <li>Monitored and adjusted systems to optimize performance</li>
+                        <li>Wrote well-designed, testable code</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Web3</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Smart Contracts</span>
+                    <span class="skill-tag">Solidity</span>
+                    <span class="skill-tag">OpenAI API</span>
+                    <span class="skill-tag">Claude API</span>
+                    <span class="skill-tag">AstroJS</span>
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">Next.js</span>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="job-title">Software Development Bootcamp</div>
+                        <div class="job-date">08/2018 - 08/2019</div>
+                    </div>
+                    <div class="company">Codecool</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="job-title">Psychology</div>
+                        <div class="job-date">09/2015 - 06/2018</div>
+                    </div>
+                    <div class="company">Karoli Gaspar University</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="job-title">BSC Mechanical Engineering</div>
+                        <div class="job-date">09/2013 - 06/2016</div>
+                    </div>
+                    <div class="company">Budapest University of Technology and Economics</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Notable Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <a href="https://www.rajfta.dev/" target="_blank">Portfolio</a>
+                        <p style="margin-top: 5px; font-size: 0.9em; color: #666;">rajfta.dev</p>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://www.simpl.education/" target="_blank">SIMPL</a>
+                        <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Crypto educational platform by Rug DAO</p>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://dewa.hu/" target="_blank">Dewa</a>
+                        <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Company website</p>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://vertmind.com" target="_blank">VertMind</a>
+                        <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Platform development</p>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://doclerholding.com/" target="_blank">Docler Holding</a>
+                        <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Corporate website</p>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://www.blueberry.garden/" target="_blank">Blueberry Garden</a>
+                        <p style="margin-top: 5px; font-size: 0.9em; color: #666;">Web3 project</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages">
+                    <div class="language-item"><strong>English</strong> - Fluent</div>
+                    <div class="language-item"><strong>Hungarian</strong> - Native</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

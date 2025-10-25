@@ -4,11 +4,11 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
 		"typecheck": "tsc --noEmit",
 		"check": "biome check .",
-		"fix": "biome check --write .",
-		"fix:unsafe": "biome check --unsafe ."
+		"lint": "biome check --write .",
+		"lint:unsafe": "biome check --unsafe .",
+		"seed": "tsx scripts/seed-sanity.ts"
 	},
 	"dependencies": {
 		"@sanity/client": "^7.12.0",
@@ -39,6 +39,7 @@
 		"prettier": "^3.6.2",
 		"prettier-plugin-tailwindcss": "^0.7.1",
 		"tailwindcss": "^4.1.15",
+		"tsx": "^4.20.6",
 		"typescript": "5.9.3"
 	}
 }
