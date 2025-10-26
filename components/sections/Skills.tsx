@@ -38,7 +38,7 @@ const Skills = ({ skills: { experiences, skills } }: SkillsProps) => {
 									className="flex flex-col items-center justify-center m-4 text-center transition-all duration-300 ease-in-out "
 									key={skill.name}
 								>
-									<div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fef4f5] transition-colors duration-300 ease-in-out hover:bg-[transparent] sm:h-24 sm:w-24">
+									<div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fff] transition-colors duration-300 ease-in-out hover:bg-[transparent] sm:h-24 sm:w-24">
 										<div className="relative w-1/2 h-1/2">
 											<Image
 												src={skill.icon}

@@ -11,7 +11,15 @@ type WorksProps = {
 	works: WorksType;
 };
 
-const tags = ["All", "UI/UX", "NextJS", "Web3", "Graphql"];
+const tags = [
+	"All",
+	"NextJS",
+	"Smart contracts",
+	"Solo project",
+	"CMS",
+	"Design",
+	"AstroJS",
+];
 
 const Works = ({ works }: WorksProps) => {
 	const [filteredWorks, setFilteredWorks] = useState(works);
@@ -73,14 +81,14 @@ const Works = ({ works }: WorksProps) => {
 					<AnimatePresence>
 						<motion.div
 							animate={controls}
-							className="flex flex-wrap items-center justify-center"
+							className="flex flex-wrap justify-center"
 						>
 							{filteredWorks.map((work) => (
 								<div
-									className="m-8 flex w-72 cursor-pointer flex-col items-center justify-center rounded-lg bg-[#fff] p-4 text-black transition-all duration-300 ease-linear hover:shadow-[0px_0px_25px_rgba(0,0,0,0.2)]"
+									className="m-8 items-start flex w-72 cursor-pointer flex-col rounded-lg bg-[#fff] p-4 text-black transition-all duration-300 ease-linear hover:shadow-[0px_0px_25px_rgba(0,0,0,0.2)]"
 									key={work._id}
 								>
-									<div className="relative flex h-48 w-full items-center justify-center overflow-hidden rounded-lg">
+									<div className="relative flex h-48 w-full aspect-square overflow-hidden rounded-lg">
 										<Image
 											src={work.imgUrl}
 											fill
