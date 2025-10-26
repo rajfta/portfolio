@@ -7,6 +7,7 @@ import { memo, useCallback, useRef, useState } from "react";
 import { getRndInteger, memoize } from "../../util";
 
 import { MotionWrapper, Wrapper } from "../wrappers";
+import { count } from "console";
 
 const scaleVariants = {
 	whileInView: {
@@ -182,19 +183,10 @@ const Landing = () => {
 					<motion.div
 						whileInView={{ opacity: [0, 1] }}
 						transition={{ duration: 0.5, delayChildren: 0.5 }}
-						className="relative flex items-end justify-end w-full h-full my-8 flex-2 xl:my-0"
+						className="relative flex items-center justify-center w-full h-full my-8 flex-2 xl:my-0"
 					>
-						<Image
-							fill
-							src={
-								counter.current > 4 ? "/images/shrek.png" : "/images/sub2.png"
-							}
-							className={`z-[1] object-contain transition-all duration-700 ease-linear ${
-								!revealed ? "brightness-[0.2]" : "brightness-[1]"
-							}`}
-							alt="profile_picture"
-						/>
-						<motion.img
+						{/* Square parent container with explicit dimensions */}
+						<motion.div
 							animate={{
 								scale: [1, 1.05],
 							}}
@@ -204,10 +196,41 @@ const Landing = () => {
 								ease: "linear",
 								repeatType: "mirror",
 							}}
-							src="/svgs/circle-pink.svg"
-							alt="profile_circle"
-							className="absolute left-0 right-0 bottom-0 z-[0] h-[90%] w-full object-contain "
-						/>
+							className="relative aspect-square w-[90%] max-w-md overflow-visible"
+						>
+							{/* Pink circle - fills entire parent square */}
+							<img
+								src="/svgs/circle-pink.svg"
+								alt="profile_circle"
+								className="absolute inset-0 z-0 h-full w-full object-contain"
+							/>
+
+							{/* Profile image - anchored at bottom, extends above parent */}
+							<div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[130%] w-full z-10">
+								<Image
+									fill
+									src={
+										counter.current > 4
+											? "/images/shrek.png"
+											: "/images/rajfta2.png"
+									}
+									className={`object-contain object-bottom transition-all duration-700 ease-linear ${
+										!revealed ? "brightness-[0.2]" : "brightness-[1] "
+									} ${counter.current > 4 ? "" : "scale-100"}`}
+									style={
+										counter.current <= 4
+											? {
+													maskImage:
+														"linear-gradient(to bottom, black 70%, transparent 95%)",
+													WebkitMaskImage:
+														"linear-gradient(to bottom, black 70%, transparent 95%)",
+												}
+											: undefined
+									}
+									alt="profile_picture"
+								/>
+							</div>
+						</motion.div>
 					</motion.div>
 
 					<FloatingTechs />
